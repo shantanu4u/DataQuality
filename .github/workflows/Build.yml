@@ -9,7 +9,7 @@ jobs:
         image: postgres:latest
         env:
           POSTGRES_DB: postgres_db
-          POSTGRES_PASSWORD: postgres_password
+          POSTGRES_PASSWORD: postgres
           POSTGRES_PORT: 5432
           POSTGRES_USER: postgres_user
         ports:
@@ -24,7 +24,13 @@ jobs:
         run: |
           apt-get update
           apt-get install --yes postgresql-client
-      - name: Query database
-        run: psql -h postgres -d postgres_db -U postgres_user -c 'SELECT 1;'
+      - name: Connect to PostgreSQL
+        # Runs a script that creates a PostgreSQL table, populates
+        # the table with data, and then retrieves the data.
+        run: node client.js
+        # Environment variables used by the `client.js` script to create a new PostgreSQL table.
         env:
-          PGPASSWORD: postgres_password
+          # The hostname used to communicate with the PostgreSQL service container
+          POSTGRES_HOST: postgres
+          # The default PostgreSQL port
+          POSTGRES_PORT: 5432
