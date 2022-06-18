@@ -3,9 +3,9 @@ const { Client } = require('pg');
 const pgclient = new Client({
     host: process.env.POSTGRES_HOST,
     port: process.env.POSTGRES_PORT,
-    user: 'postgres',
+    user: 'postgres_user',
     password: 'postgres',
-    database: 'postgres'
+    database: 'postgres_db'
 });
 
 pgclient.connect();
