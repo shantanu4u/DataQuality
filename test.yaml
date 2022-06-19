@@ -50,9 +50,7 @@ jobs:
           apt-get update
           apt-get install --yes postgresql-client
       - name: Run migrations
-        run: |
-           cd src
-           python manage.py migrate
+        run: python manage.py migrate
       - name: Run tests
         env:
           DEBUG: "0"
@@ -62,6 +60,14 @@ jobs:
           DB_HOST: ${{ env.POSTGRES_HOST }}
           DB_DATABASE: ${{ env.POSTGRES_DB }}
           DB_PORT: ${{ env.POSTGRES_PORT }}
-        run: |
-          cd src 
-          python manage.py test
+        run: python manage.py test
+      - name: Connect to PostgreSQL
+        # Runs a script that creates a PostgreSQL table, populates
+        # the table with data, and then retrieves the data.
+        run: node client.js
+        # Environment variables used by the `client.js` script to create a new PostgreSQL table.
+        env:
+          # The hostname used to communicate with the PostgreSQL service container
+          POSTGRES_HOST: postgres
+          # The default PostgreSQL port
+          POSTGRES_PORT: 5432
