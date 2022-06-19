@@ -1,5 +1,11 @@
 name: PostgreSQL
-on: push
+on:
+    workflow_call:
+    workflow_dispatch:
+    push:
+       branches: [main]
+    pull_request:
+        branches: [main]
 jobs:
   postgres:
     runs-on: ubuntu-latest
