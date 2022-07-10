@@ -1,4 +1,4 @@
-Golden_Id,First_Name,Last_Name,Email,City,Street,Country,Currency_Code,DUNS,Address,Phone,Company,Customer_Classification,LBU,Market_Segment
+Id,First_Name,Last_Name,Email,City,Street,Country,Currency_Code,DUNS,Address,Phone,Company,Customer_Classification,LBU,Market_Segment
 1,Kenna,Dagwell,kdagwell0@tinyurl.com,Pigcawayan,Sunnyside,Philippines,PHP,35-751-8883,Tennyson,809-720-8464,Ntags,Honda,Granite,Waterproofer
 2,Hailey,Adamowicz,hadamowicz1@bloglines.co.tc,Stráž nad Nisou,Center,Czech Republic,CZK,48-582-2414,Jay,129-380-2548,Thoughtworks,Hyundai,Plastic,Painter
 3,Cchaddie,Rayment,crayment2@hp.co.tc,Yelizavetino,Shoshone,Russia,RUB,95-702-9369,Magdeline,859-712-0649,Vimbo,Chrysler,Vinyl,Plasterers
