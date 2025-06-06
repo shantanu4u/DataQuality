@@ -35,6 +35,24 @@ Ensuring real-time system sync and data consistency was particularly challenging
 Let me know if you'd like this tailored for a slide deck, performance appraisal, or email.
 
 
+---------------------+-------++++++----------
+Here’s a refined and professional version of your paragraph:
+
+
+---
+
+The project to fetch the last transaction date from the SAP system into the MDM platform posed a significant challenge. We needed to query the SAP system to identify which data had the most recent transaction. If a newer transaction date existed, we had to use an intermediary platform to filter and push the relevant data into the MDM system.
+
+This information was essential for the Salesforce system, as it needed to calculate which data records were active or inactive within the company based on recent transactions.
+
+During this project, I learned X, Y, and Z, which enabled me to design a solution that not only allowed MDM to accurately capture the latest transaction dates but also ensured the seamless transfer of this information to Salesforce. This approach also provided better visibility into which T systems are currently conducting business with the company.
+
+
+---
+
+Let me know if you'd like it shortened or adapted for a resume or presentation.
+
+
 
 
 
